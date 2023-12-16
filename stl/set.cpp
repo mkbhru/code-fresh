@@ -3,7 +3,7 @@ using namespace std;
 int main()
 {
     // Initialize set
-    set<int> s;
+    unordered_set<int> s;
 
     s.insert(1);
     s.insert(4);

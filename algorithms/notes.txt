@@ -1,0 +1,1 @@
+always take maxi/ans as INT_MIN or arr[0] never 0.

@@ -1,0 +1,3 @@
+subarray - any continuous part of the array
+subset - 
+subsequence - 
