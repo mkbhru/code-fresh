@@ -31,8 +31,7 @@ int main()
 {
     // cout << fibo(-12) << endl;
     // cout << fibo(5) << endl;
-    // for (int i = 0; i < 10; i++)
-    // {
+    // for (int i = 0; i < 10; i++    // {
     //     cout << fibo(i) << endl;
     // }
     int n = 30;
