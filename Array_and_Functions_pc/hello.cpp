@@ -1,13 +1,18 @@
 #include <iostream>
-// #include <bits/stdc++.h>
+#include <queue>
 using namespace std;
 
 int main()
 {
-    // cout << "hello jj world" << endl;
-    cout << (int)' ' << endl;
-    cout << "welcome home" << endl;
-    cout << "hey coder bro" << endl;
+    queue<int> q;  
+    q.push(11);
+    q.push(12);
+    q.push(13);
+    int s;
+    cin >> s;
+    q.push(s);
+    cout << q.front() << endl;
+    cout << q.back() << endl;
 
     return 0;
 }
