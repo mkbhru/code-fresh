@@ -4,15 +4,11 @@ using namespace std;
 
 int main()
 {
-    queue<int> q;  
-    q.push(11);
-    q.push(12);
-    q.push(13);
-    int s;
-    cin >> s;
-    q.push(s);
-    cout << q.front() << endl;
-    cout << q.back() << endl;
-
+    cout << " hello world123" << endl;
+    char ch = '1';
+    cout << int(ch) << endl;
+    cout << (ch - '0') << endl;
+    cout << char(50) << endl;
+    cout << min(1, 2) << endl;
     return 0;
 }

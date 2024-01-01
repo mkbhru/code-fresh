@@ -35,6 +35,8 @@ int main()
 	mp[45]++;
 	for (auto x : mp)
 		cout << x.first << "->" << x.second << endl;
+	// for(auto { x,  y} : mp)
+	// 	cout << x << y << endl;
 	//ok on the basis of keys map get sorted.
 	return 0;
 }
