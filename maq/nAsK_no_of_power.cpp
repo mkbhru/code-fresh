@@ -1,58 +1,65 @@
-// C++ implementation of the above approach
 #include <iostream>
+#include <vector>
+#include <sstream>
+#include <algorithm>
+
 using namespace std;
 
-// Function to print k numbers which are powers of two
-// and whose sum is equal to n
-bool FindAllElements(int n, int k)
+string identify_triangle_form(const string &toy)
 {
-    // Initialising the sum with k
-    int sum = k;
-
-    // Initialising an array A with k elements
-    // and filling all elements with 1
-    int A[k];
-    fill(A, A + k, 1);
-
-    for (int i = k - 1; i >= 0; --i)
+    stringstream ss(toy);
+    int sides[3] = {0};
+    for (int i = 0; i < 3; ++i)
     {
-
-        // Iterating A[] from k-1 to 0
-        while (sum + A[i] <= n)
+        if (!(ss >> sides[i]))
         {
-
-            // Update sum and A[i]
-            // till sum + A[i] is less than equal to n
-            sum += A[i];
-            A[i] *= 2;
+            return "None of these";
         }
     }
 
-    // Impossible to find the combination
-    if (sum != n)
-    {
-        return false;
-    }
+    sort(sides, sides + 3);
 
-    // Possible solution is stored in A[]
+    if (sides[0] + sides[1] > sides[2])
+    {
+        if (sides[0] == sides[1] && sides[1] == sides[2])
+        {
+            return "Equilateral";
+        }
+        else if (sides[0] == sides[1] || sides[1] == sides[2])
+        {
+            return "Isosceles";
+        }
+        else
+        {
+            return "None of these";
+        }
+    }
     else
     {
-        return true;
+        return "None of these";
     }
 }
 
-// Driver code
+vector<string> identify_triangle_forms(const vector<string> &triangle_toys)
+{
+    vector<string> forms;
+
+    for (const string &toy : triangle_toys)
+    {
+        forms.push_back(identify_triangle_form(toy));
+    }
+
+    return forms;
+}
+
 int main()
 {
-    int n = 12;
-    int k = 2;
+    vector<string> triangle_toys = {"1 2 2", "3 3 3", "3 4 5", "11 3 4"};
+    vector<string> result = identify_triangle_forms(triangle_toys);
 
-    if(FindAllElements(n, k)){
-        cout << "YES";
-
-    }
-    else{
-        cout << "NO";
+    for (const string &form : result)
+    {
+        cout << form << endl;
     }
 
     return 0;
