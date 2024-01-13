@@ -1,0 +1,7 @@
+binary trees:
+- hierarchical data structure
+1. Full bt: either 0 or 2 children
+2. Complete bt: all levels are completely filled, last level has all the nodes as lefe as possible
+3. Perfect bt: all the leaf nodes are completely filled
+4. Balanced bt: height of tree at max log(N).
+5. Degenerate bt: a skew bt, straight line, linked list basically
