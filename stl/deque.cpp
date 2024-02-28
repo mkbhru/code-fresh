@@ -19,5 +19,6 @@ so deque vs list
 deque is vector based - double ended queue, access is o(1), deletion from middle is o(n) but from ends is amortized const.
 list is doubly linked list., access is o(n), deletion is fast
 - a deque can be treated as a normal list
+so in the end generally there is not much deletion involved from middle so use deque always. 
 I841lG9
 */
