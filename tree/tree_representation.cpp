@@ -83,7 +83,7 @@ int main()
     root->left->right = new Node(4);
     cout << "level order traversal: " << endl;
     levelOrderTraversal(root);
-    cout << endl;
+    cout << endl<< endl;
     preorderTraversal(root);
     cout << endl;
     postorderTraversal(root);
