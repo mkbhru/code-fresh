@@ -19,8 +19,9 @@ int main()
 
     //second method to store graph is adjacency List
 
-    int n, m;
+    int n, m; // n is nodes, m are edges
     cin >> n >> m;
+    // vector<vector<int>> adjList(n + 1);
     vector<int> adjList[n + 1];
     int u, v;
     for(int i = 0; i < m; i++){
